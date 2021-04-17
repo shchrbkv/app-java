@@ -1,0 +1,70 @@
+* {
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+.rounded {
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-color: #F0F0F0;
+    -fx-border-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.field {
+    -fx-background-color: #FFFFFF;
+}
+.menu {
+    -fx-background-color: #FAFAFA;
+}
+
+.selectable{
+    -fx-cursor: hand;
+}
+.selectable:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+.selectable:pressed {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 10, 0, 0, 0);
+}
+.selectable:focused{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 10, 0, 0, 0);
+}
+
+.green:hover {
+    -fx-border-color: #53b096;
+    -fx-effect: dropshadow(three-pass-box, rgba(83,176,150,0.3), 10, 0, 0, 0);
+}
+.green:pressed {
+    -fx-border-color: #53b096;
+    -fx-effect: dropshadow(three-pass-box, rgba(83,176,150,0.7), 10, 0, 0, 0);
+}
+
+.red:hover {
+    -fx-border-color: #d85151;
+    -fx-effect: dropshadow(three-pass-box, rgba(216, 81, 81, 0.3), 10, 0, 0, 0);
+}
+.red:pressed {
+    -fx-border-color: #d85151;
+    -fx-effect: dropshadow(three-pass-box, rgba(216, 81, 81, 0.8), 10, 0, 0, 0);
+}
+
+.list-view{
+    -fx-background-color: none;
+    -fx-border-color: none;
+    -fx-border-width: 0;
+}
+.list-cell{
+    -fx-padding: 2px 0 2px 0;
+    -fx-background-color: none;
+    -fx-border-color: none;
+    -fx-border-width: 0;
+}
+.list-cell:hover > .selectable:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0), 10, 0, 0, 0);
+    -fx-border-color: #53b096;
+    -fx-cursor: hand;
+}
+
+.list-cell:selected > .selectable{
+    -fx-border-color: #53b096;
+}
