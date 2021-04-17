@@ -29,13 +29,13 @@ public final class BankModel {
         try {
             FileOutputStream fileOutputStream = new FileOutputStream("src/data/database");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(new ArrayList<Client>(DataResource.clients));
-            objectOutputStream.writeObject(new ArrayList<Account>(DataResource.accounts));
-            objectOutputStream.writeObject(new ArrayList<HistoryRecord>(DataResource.history));
+            objectOutputStream.writeObject(new ArrayList<>(DataResource.clients));
+            objectOutputStream.writeObject(new ArrayList<>(DataResource.accounts));
+            objectOutputStream.writeObject(new ArrayList<>(DataResource.history));
             objectOutputStream.flush();
             objectOutputStream.close();
         } catch (Exception e) {
-            System.err.println(e);
+            System.err.println();
         }
     }
 
@@ -142,7 +142,7 @@ public final class BankModel {
         DataResource.history.add(0, new HistoryRecord(accountId, id, message, value));
     }
     public final List<HistoryRecord> getHistoryForAccountId(int id){
-        List<HistoryRecord> current = new ArrayList<HistoryRecord>();
+        List<HistoryRecord> current = new ArrayList<>();
         for (HistoryRecord record : getHistory())
             if (record.getAccountId() == id)
                 current.add(record);
@@ -196,7 +196,7 @@ public final class BankModel {
                     writer.write(record.toString());
             }
         } catch (IOException e) {
-            System.err.println(e);
+            System.err.println();
         }
     }
 }

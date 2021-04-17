@@ -44,7 +44,6 @@ public class LoginController {
                 goToMain();
             }
             catch (Exception e){
-                System.err.println(e);
                 message(e.getMessage());
             }
         }

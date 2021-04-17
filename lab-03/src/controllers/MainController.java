@@ -148,7 +148,7 @@ public class MainController {
             VAccountsList.refresh();
         }
         catch (Exception e) {
-            System.err.println(e);
+            System.err.println();
         }
     }
 
@@ -161,7 +161,7 @@ public class MainController {
             VAccountsList.refresh();
         }
         catch (Exception e) {
-            System.err.println(e);
+            System.err.println();
         }
     }
 
@@ -174,7 +174,7 @@ public class MainController {
             VAccountsList.refresh();
         }
         catch (Exception e) {
-            System.err.println(e);
+            System.err.println();
         }
     }
 
@@ -199,7 +199,7 @@ public class MainController {
             VHistoryList.getItems().clear();
         }
         catch (Exception e) {
-            System.err.println(e);
+            System.err.println();
         }
     }
 

@@ -50,7 +50,7 @@ public class Client implements Serializable {
             return new String(MessageDigest.getInstance("MD5")
                     .digest(password.getBytes()));
         } catch (NoSuchAlgorithmException e) {
-            System.err.println(e);
+            System.err.println();
             return null;
         }
     }
