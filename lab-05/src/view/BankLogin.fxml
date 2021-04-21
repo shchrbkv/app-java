@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="280.0" minWidth="180.0" prefHeight="280.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <padding>
+      <Insets bottom="18.0" left="15.0" right="15.0" top="18.0" />
+   </padding>
+   <children>
+      <Label id="FullName" maxWidth="1.7976931348623157E308" text="Хороший Банк" textFill="#53b096" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Roboto Black" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <VBox fx:id="IFields" alignment="CENTER" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <TextField fx:id="FName" maxWidth="1.7976931348623157E308" promptText="Имя" stylesheets="@styles.css" visible="false">
+               <font>
+                  <Font name="Roboto" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="rounded" />
+                  <String fx:value="selectable" />
+                  <String fx:value="field" />
+               </styleClass>
+            </TextField>
+            <TextField fx:id="FLogin" maxWidth="1.7976931348623157E308" promptText="Логин" stylesheets="@styles.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Roboto" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="rounded" />
+                  <String fx:value="selectable" />
+                  <String fx:value="field" />
+               </styleClass>
+            </TextField>
+            <PasswordField fx:id="FPassword" maxWidth="1.7976931348623157E308" promptText="Пароль" stylesheets="@styles.css">
+               <VBox.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Roboto" size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="rounded" />
+                  <String fx:value="field" />
+                  <String fx:value="selectable" />
+               </styleClass>
+            </PasswordField>
+            <Label fx:id="LMessage" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Неправильный логин или пароль" textAlignment="CENTER" textFill="#d85151" visible="false" wrapText="true">
+               <font>
+                  <Font name="Roboto" size="10.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button id="ButtonPay" fx:id="BLogin" alignment="CENTER" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#go" style="-fx-background-color: #53b096; -fx-border-color: #53b096 #53b096;" stylesheets="@styles.css" text="Войти" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="rounded" />
+                  <String fx:value="selectable" />
+                  <String fx:value="green" />
+               </styleClass>
+            </Button>
+            <Button id="ButtonPay" fx:id="BRegister" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#change" style="-fx-border-color: #F0F0F0; -fx-border-radius: 6; -fx-background-color: #FAFAFA; -fx-background-radius: 6;" stylesheets="@styles.css" text="Регистрация" textFill="#525252">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="rounded" />
+                  <String fx:value="selectable" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
